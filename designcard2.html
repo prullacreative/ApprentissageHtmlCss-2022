@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Light Neumorphic Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div>
+      
+        <div class="container">
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>01</h2>
+                        <h3>Infographie</h3>
+                        <p>Affiche, Flyer, Carte de visite, CV, Dessin,
+                           Logo, Retourche photo, Montage Video.
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>02</h2>
+                        <h3>Informatique</h3>
+                        <p>Developpement Web et mobile, Conception de chatbot.
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>03</h2>
+                        <h3>Multimedia</h3>
+                        <p>Animation,montage video. </p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  </div>
+       
+</body>
+
+</html>
+
+<style>
+    * {
+       margin: 0;
+       padding: 0;
+       font-family: catalina ;
+       box-sizing: border-box;
+       @font-face {
+           font-family: catalina ;
+           src: url(util/pce/NickelodeonNF.ttf);
+       };  
+
+      
+
+    }
+
+body
+{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ebf5fc;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.container .card
+{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255,0.5),
+                5px 5px 5px rgba(0,0,0,0.5),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+
+}
+
+.container .card .box
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card:hover .box
+{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) ;
+    background: linear-gradient(45deg, #b95ce4,#4f29cd);
+}
+
+.container .card .box .content
+{
+    padding: 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+  
+.container .card .box .content h2
+{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0,0,0,0.02);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.container .card:hover .box .content h2
+{
+    color: rgba(0,0,0,0.05);
+}
+
+.container .card .box .content h3
+{
+   font-size: 1.8em;
+   color: #777;
+   z-index: 1;
+   transition: 0.5s;
+}
+
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p
+{
+    color: #fff   ;
+}
+
+.container .card .box .content a
+{
+   position: relative;
+   display: inline-block;
+   padding: 8px 20px;
+   background: #03a9f4;
+   margin-top: 15px;
+   border-radius: 20px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 400;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.container .card:hover .box .content a
+{
+    background: #ff568f;
+}
+
+</style>

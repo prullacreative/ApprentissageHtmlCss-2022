@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login design 1</title>
+</head>
+<body>
+    <div>
+       <div class="login">
+        <div class="logo">
+             <i class="ri-alipay-fill" aria-hidden="true"></i>
+        </div>
+
+        <h2>Login</h2>
+
+            <div class="group">
+                <input type="text" placeholder="Username">
+                <i class="ri ri-user-3-fill" aria-hidden="true"></i>
+            </div>
+
+            <div class="group">
+                <input type="password" placeholder="password">
+                <i class="bi bi-lock" aria-hidden="true"></i>
+            </div>
+
+            <button type="submit">Login</button>
+            <p class="f">Forgot <a href="#">Username</a>/  
+                <a href="#">Password</a> ?
+            </p>
+       </div>
+
+       <div class="bottom">
+        <p class="s">D'ont have an account ?
+        <a href="#">Signup</a></p>
+       </div>
+
+    </div>
+</body>
+
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: September ;
+        color: var(--color);
+        @font-face {
+        font-family: september;
+        src: url(./util/pce/22\ September.otf);
+        }
+
+    }
+
+    
+    body
+    {
+        display: flex ;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .login
+    {
+        width: 320px;
+    }
+
+    .bottom
+    {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    :root
+    {
+        --main: #673ab7;
+        --color: #444;
+    }
+
+    input,button,a,p{
+        font-size: 13.3333px;
+        font-weight: 600;
+    }
+
+    input, button
+    {
+        margin-bottom: 20px;
+    }
+   
+    input
+    {
+        width: 100%;
+        padding: 10px 10px 10px 30px;
+        border: 0;
+        border-bottom: 2px solid var(--color);
+        
+    }
+
+    
+
+    .group
+    {
+        position: relative;
+    }
+
+    .group i.bi, i.ri 
+    {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+    }
+
+    h2
+    {
+        margin-bottom: 20px;
+    }
+
+    button
+    {
+        width: 100%;
+        padding: 10px 0;
+        border: 0;
+        border-radius:20px;
+        background-color: var(--main);
+        color: #fff;
+    }
+
+    a
+    {
+        color: var(--main);
+    }
+
+    p
+    {
+        text-align: center;
+    }
+
+    .logo
+    {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .logo i.bi, i.ri
+    {
+        color: var(--main);
+        margin-bottom: 20px;
+    }
+
+    button::focus, input:focus
+    {
+        outline: 0;
+    }
+
+    input:focus
+    {
+        border-color: var(--main);
+    }
+
+    input:focus+i.bi,input:focus+i.ri,  input:focus::placeholder
+    {
+        color: var(--main);
+        
+    }
+
+    body:before, body::after
+    {
+        content: "";
+        box-shadow: 0 0 20px 0 var(--main);
+        position: absolute;
+        background-color: var(--main);
+        border-radius: 50%;
+    }
+
+    body::before
+    {
+        width: 300px;
+        height: 300px;
+        left: -150px;
+        bottom: -150px;
+    }
+
+
+    body::after
+    {
+        width: 500px;
+        height: 500px;
+        top: -250px;
+        right: -250px;
+    }
+
+   
+</style>
+
+</html>

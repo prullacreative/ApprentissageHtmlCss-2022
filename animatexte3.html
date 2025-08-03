@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation | texte 3</title>
+</head>
+<body>
+    <div>
+        <div class="wrapper">
+            <div class="static-text">J'suis une femme </div>
+            <ul class="dynamic-text">
+                <li><span> combattante</span></li>
+                <li><span> forte</span></li>
+                <li><span> digne</span></li>
+            </ul>
+
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: catalina;
+    }
+
+    body
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: burlywood;
+
+    }
+
+    .wrapper
+    {
+        display: inline-flex;
+
+    }
+
+    .wrapper .static-text
+    {
+        color: aliceblue;
+        font-size: 60px;
+        font-weight: 800;
+    }
+
+    .wrapper .dynamic-text
+    {
+        margin-left: 15px;
+        height: 90px;
+        line-height: 90px;
+        overflow: hidden;
+    }
+
+    .dynamic-text li
+    {
+        color: orange;
+        list-style: none;
+        font-size: 60px;
+        font-weight:600 ;
+        position: relative;
+        top: 0;
+        animation: slide 6s steps(4) infinite ;
+    }
+
+    @keyframes slide 
+    {
+
+        100%
+        {
+            top: -360px;
+
+        }
+        
+    }
+        
+  
+
+    .dynamic-text li span
+    {
+        position: relative;
+    }
+
+
+    .dynamic-text li span::after
+    {
+        content: " ";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: burlywood;
+        border-left: 2px solid orange;
+        animation: typing 1.5s steps(10) infinite ;
+    }
+
+    @keyframes typing 
+    {
+
+        100%
+        {
+            left: 100%;
+            margin: 0 -35px 0 35px;
+        }
+        
+    }
+
+    @font-face {
+        font-family: catalina;
+        src: url(pce/[Catalina].ttf);
+    }
+</style>

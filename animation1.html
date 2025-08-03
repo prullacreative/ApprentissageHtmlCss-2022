@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="wavy">
+        <span style="--i:1;">L</span>
+        <span style="--i:2;">o</span>
+        <span style="--i:3;">a</span>
+        <span style="--i:4;">d</span>
+        <span style="--i:5 ;">i</span>
+        <span style="--i:6;">n</span>
+        <span style="--i:7;">g</span>
+        <span style="--i:8;">.</span>
+        <span style="--i:9;">.</span>
+        <span style="--i:10;">.</span>
+    </div>
+   
+</body>
+</html>
+
+
+
+
+<style>
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: brown;
+}
+
+
+.wavy
+{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent , rgba(0,0,0,0.2)) ;
+
+
+}
+
+.wavy span
+{
+    font-family: catalina;
+    position: relative;
+    display: inline-block;
+    color: wheat;
+    font-size: 50px;
+    text-transform: uppercase;
+    animation:  animate 1s ease-in-out infinite;
+    animation-delay: calc(0.9s * var(--i));
+}
+
+@font-face {
+    font-family: catalina;
+    src: url(pce/[Catalina].ttf);
+}
+
+
+
+@keyframes animate {
+    0%
+    {
+        transform: translateY(0px);
+    }
+
+    20%
+    {
+        transform: translateY(-20px);
+    }
+
+    40%, 100%
+    {
+        transform: translateY(0px);
+    }
+}
+
+</style>
